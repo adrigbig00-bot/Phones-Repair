@@ -1,0 +1,39 @@
+[gd_scene load_steps=6 format=3 uid="uid://dpmhogoteirq"]
+
+[ext_resource type="Script" uid="uid://duguf5j5rqcny" path="res://Assets/Scripts/Drag and Drop.gd" id="1_sdss7"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_go42g"]
+bg_color = Color(1, 1, 1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wicfy"]
+bg_color = Color(1, 1, 1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cguwc"]
+bg_color = Color(1, 1, 1, 1)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_2h2j5"]
+load_path = "res://.godot/imported/2026-03-29_13-33-46.png-0dc311c864f0d7db6085155ac23b88d0.ctex"
+
+[node name="Button" type="Button"]
+z_index = 5
+custom_minimum_size = Vector2(80, 80)
+offset_left = 327.0
+offset_top = 349.0
+offset_right = 407.0
+offset_bottom = 429.0
+size_flags_vertical = 3
+theme_override_styles/hover = SubResource("StyleBoxFlat_go42g")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_wicfy")
+theme_override_styles/normal = SubResource("StyleBoxFlat_cguwc")
+script = ExtResource("1_sdss7")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+visible = false
+layout_mode = 0
+offset_right = 85.0
+offset_bottom = 81.0
+texture = SubResource("CompressedTexture2D_2h2j5")
+expand_mode = 1
+
+[connection signal="button_down" from="." to="." method="_on_button_down"]
+[connection signal="button_up" from="." to="." method="_on_button_up"]

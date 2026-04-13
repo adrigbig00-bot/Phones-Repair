@@ -1,0 +1,431 @@
+[gd_scene load_steps=24 format=3 uid="uid://3ioruj5xok6p"]
+
+[ext_resource type="Script" uid="uid://ba6um1v4u72i5" path="res://Assets/Scripts/Polomka.gd" id="1_e737r"]
+[ext_resource type="Script" uid="uid://bpgksa2jgl3ui" path="res://Assets/Scripts/Clicking.gd" id="2_j8rg2"]
+[ext_resource type="PackedScene" uid="uid://dpmhogoteirq" path="res://Assets/UI/DaDObj.tscn" id="3_nemsl"]
+[ext_resource type="Script" uid="uid://bkfg7jdkw6103" path="res://Assets/Scripts/GlobVar.gd" id="4_j8rg2"]
+[ext_resource type="Script" uid="uid://cuiexvbj0kqhi" path="res://Assets/Scripts/PurchaseDAD.gd" id="4_nemsl"]
+[ext_resource type="Texture2D" uid="uid://w8v0f715bhry" path="res://Assets/Textures/acetone-2026329-13434-206.png" id="5_74lwa"]
+[ext_resource type="Texture2D" uid="uid://bok7uyclvw7gm" path="res://Assets/Textures/acetone-2026329-134822-953.png" id="6_d5r0g"]
+[ext_resource type="Texture2D" uid="uid://k2i524fil0s4" path="res://Assets/Textures/acetone-2026329-14719-264.png" id="7_4p4kh"]
+[ext_resource type="Texture2D" uid="uid://dluqocswhabwe" path="res://Assets/Textures/acetone-2026329-135123-778.png" id="7_siosq"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_4iosf"]
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_ivlgc"]
+data = PackedVector3Array(-0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, -0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, -0.5, 0.5, 0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, 0.5, 0.5, -0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, -0.5, 0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, -0.5, -0.5)
+
+[sub_resource type="BoxMesh" id="BoxMesh_ivlgc"]
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_4iosf"]
+data = PackedVector3Array(-0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, -0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, -0.5, 0.5, 0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, 0.5, 0.5, -0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, -0.5, 0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, -0.5, -0.5)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ivlgc"]
+albedo_color = Color(0, 0, 0, 1)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mncer"]
+size = Vector2(85, 83)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_e737r"]
+bg_color = Color(0.0588235, 1, 0.0588235, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_a8f2s"]
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_xkoyt"]
+data = PackedVector3Array(-0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, -0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, -0.5, 0.5, 0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, 0.5, 0.5, -0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, -0.5, 0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, -0.5, -0.5)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4iosf"]
+albedo_color = Color(0, 0, 0, 1)
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_a8f2s"]
+data = PackedVector3Array(-0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, -0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, -0.5, 0.5, 0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, 0.5, 0.5, -0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, -0.5, 0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, -0.5, -0.5)
+
+[sub_resource type="BoxMesh" id="BoxMesh_haghd"]
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_haghd"]
+data = PackedVector3Array(-0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, -0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, -0.5, 0.5, 0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, 0.5, 0.5, -0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, -0.5, 0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, -0.5, -0.5)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_a8f2s"]
+albedo_color = Color(0, 0, 0, 1)
+
+[node name="Phone" type="StaticBody3D"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0, 0)
+script = ExtResource("1_e737r")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(3.44053, 0, 0, 0, 0.156148, 0, 0, 0, 1.91415, 0, 0, 0)
+mesh = SubResource("BoxMesh_4iosf")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(3.44053, 0, 0, 0, 0.156148, 0, 0, 0, 1.91415, 0, 0, 0)
+shape = SubResource("ConcavePolygonShape3D_ivlgc")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="."]
+transform = Transform3D(-0.00987334, 0.150977, 0.0177654, -0.39416, -0.00379289, 0.0147222, 0.00314978, -0.00138373, 1.89801, -1.62704, 0.0341483, 0)
+mesh = SubResource("BoxMesh_4iosf")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="."]
+transform = Transform3D(-0.0247326, 0.143267, 0.0162627, -0.396034, -0.00895636, 0.0140808, 0.00315136, -0.00116161, 1.89719, -1.62704, 0.0341483, 0)
+shape = SubResource("ConcavePolygonShape3D_ivlgc")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="."]
+transform = Transform3D(-0.00987334, 0.150977, 0.0177654, -0.39416, -0.00379289, 0.0147222, 0.00314978, -0.00138373, 1.89801, 1.66109, 0.0341483, 0)
+mesh = SubResource("BoxMesh_4iosf")
+
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="."]
+transform = Transform3D(-0.0247326, 0.143267, 0.0162627, -0.396034, -0.00895636, 0.0140808, 0.00315136, -0.00116161, 1.89719, 1.66109, 0.0341483, 0)
+shape = SubResource("ConcavePolygonShape3D_ivlgc")
+
+[node name="MeshInstance3D4" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.00316385, -0.00136954, 3.52269, -0.39592, -0.00375399, 0.0273242, 0.00991743, -0.149429, -0.0329726, -0.00975949, 0.0341483, -0.871691)
+mesh = SubResource("BoxMesh_4iosf")
+
+[node name="CollisionShape3D4" type="CollisionShape3D" parent="."]
+transform = Transform3D(0.0031653, -0.00115077, 3.52117, -0.397787, -0.00887272, 0.026134, 0.024842, -0.141929, -0.0301836, -0.00975949, 0.0341483, -0.871691)
+shape = SubResource("ConcavePolygonShape3D_ivlgc")
+
+[node name="MeshInstance3D5" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.00316385, -0.00136954, 3.52269, -0.39592, -0.00375399, 0.0273242, 0.00991743, -0.149429, -0.0329726, -0.00975949, 0.0341483, 0.923128)
+mesh = SubResource("BoxMesh_4iosf")
+
+[node name="CollisionShape3D5" type="CollisionShape3D" parent="."]
+transform = Transform3D(0.0031653, -0.00115077, 3.52117, -0.397787, -0.00887272, 0.026134, 0.024842, -0.141929, -0.0301836, -0.00975949, 0.0341483, 0.923128)
+shape = SubResource("ConcavePolygonShape3D_ivlgc")
+
+[node name="Battery" type="Area3D" parent="." groups=["battery"]]
+script = ExtResource("2_j8rg2")
+
+[node name="MeshInstance3D100" type="MeshInstance3D" parent="Battery"]
+transform = Transform3D(-0.00502236, 0.57121, 0.00770916, -0.200501, -0.0143501, 0.00638858, 0.00160223, -0.00523523, 0.823626, -1.11942, 0.201893, 0)
+mesh = SubResource("BoxMesh_ivlgc")
+skeleton = NodePath("../..")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Battery"]
+transform = Transform3D(-0.0064649, 0.692651, 0.00868836, -0.25809, -0.017401, 0.00720005, 0.00206243, -0.00634825, 0.928242, -1.11942, 0.201893, 0)
+shape = SubResource("ConcavePolygonShape3D_4iosf")
+
+[node name="Broken_Battery" type="Area3D" parent="Battery" groups=["brok_bat"]]
+visible = false
+
+[node name="MeshInstance3D6" type="MeshInstance3D" parent="Battery/Broken_Battery"]
+transform = Transform3D(-0.00502236, 0.57121, 0.00770916, -0.200501, -0.0143501, 0.00638858, 0.00160223, -0.00523523, 0.823626, -1.11942, 0.201893, 0)
+mesh = SubResource("BoxMesh_ivlgc")
+skeleton = NodePath("../../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_ivlgc")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Battery/Broken_Battery"]
+transform = Transform3D(-0.00502236, 0.57121, 0.00770916, -0.200501, -0.0143501, 0.00638858, 0.00160223, -0.00523523, 0.823626, -1.11942, 0.201893, 0)
+shape = SubResource("ConcavePolygonShape3D_4iosf")
+
+[node name="BatteryUI" parent="Battery" groups=["batteryui", "ui_elements"] instance=ExtResource("3_nemsl")]
+offset_left = -150.0
+offset_top = 700.0
+offset_right = -70.0
+offset_bottom = 780.0
+focus_mode = 0
+
+[node name="Area2D" type="Area2D" parent="Battery/BatteryUI"]
+position = Vector2(36, 45)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Battery/BatteryUI/Area2D"]
+position = Vector2(4.5, -3.5)
+shape = SubResource("RectangleShape2D_mncer")
+
+[node name="PanBat" type="Panel" parent="Battery/BatteryUI" groups=["panbat"]]
+z_index = 2
+layout_mode = 1
+offset_right = 18.0
+offset_bottom = 17.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_e737r")
+
+[node name="TextureRect2" type="TextureRect" parent="Battery/BatteryUI"]
+layout_mode = 0
+offset_left = -14.0
+offset_top = 3.0
+offset_right = 101.0
+offset_bottom = 81.0
+texture = ExtResource("5_74lwa")
+expand_mode = 1
+
+[node name="PurchaseBattery" parent="Battery" groups=["purch_bat"] instance=ExtResource("3_nemsl")]
+visible = false
+offset_left = -150.0
+offset_top = 700.0
+offset_right = -70.0
+offset_bottom = 780.0
+focus_mode = 0
+script = ExtResource("4_nemsl")
+
+[node name="Area2D" type="Area2D" parent="Battery/PurchaseBattery"]
+position = Vector2(36, 45)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Battery/PurchaseBattery/Area2D"]
+position = Vector2(4.5, -3.5)
+shape = SubResource("RectangleShape2D_mncer")
+
+[node name="PanBat" type="Panel" parent="Battery/PurchaseBattery" groups=["panbat"]]
+z_index = 2
+layout_mode = 1
+offset_right = 18.0
+offset_bottom = 17.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_e737r")
+
+[node name="Sprite3D" type="Sprite3D" parent="Battery"]
+transform = Transform3D(0.160615, 8.88178e-16, 3.55271e-15, -1.77675e-15, -7.08365e-09, 1, 0, -0.162055, -4.37114e-08, -1.12977, 0.308561, -0.0141056)
+texture = ExtResource("5_74lwa")
+
+[node name="Processor" type="Area3D" parent="." groups=["processor"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.88549, 0, 0)
+script = ExtResource("2_j8rg2")
+
+[node name="MeshInstance3D6" type="MeshInstance3D" parent="Processor"]
+transform = Transform3D(-0.00506869, 0.565166, 0.0166117, -0.202351, -0.0141983, 0.0137661, 0.00161701, -0.00517984, 1.77475, -1.11538, 0.155434, 0.000409334)
+mesh = SubResource("BoxMesh_a8f2s")
+skeleton = NodePath("../..")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Processor"]
+transform = Transform3D(-0.00709744, 0.721282, 0.0169827, -0.283342, -0.0181203, 0.0140736, 0.00226422, -0.00661067, 1.81439, -1.11538, 0.155434, 0.000409334)
+shape = SubResource("ConcavePolygonShape3D_xkoyt")
+
+[node name="Broken_Processor" type="Area3D" parent="Processor" groups=["brok_proc"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.57628e-07, 0)
+visible = false
+
+[node name="MeshInstance3D6" type="MeshInstance3D" parent="Processor/Broken_Processor"]
+transform = Transform3D(-0.00506869, 0.565166, 0.0166117, -0.202351, -0.0141983, 0.0137661, 0.00161701, -0.00517984, 1.77475, -1.11538, 0.155434, 0.000409334)
+mesh = SubResource("BoxMesh_a8f2s")
+skeleton = NodePath("../../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_4iosf")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Processor/Broken_Processor"]
+transform = Transform3D(-0.00506869, 0.565166, 0.0166117, -0.202351, -0.0141983, 0.0137661, 0.00161701, -0.00517984, 1.77475, -1.11538, 0.155434, 0.000409334)
+shape = SubResource("ConcavePolygonShape3D_a8f2s")
+
+[node name="ProcessorUI" parent="Processor" groups=["processorui", "ui_elements"] instance=ExtResource("3_nemsl")]
+offset_left = -150.0
+offset_top = 700.0
+offset_right = -70.0
+offset_bottom = 780.0
+focus_mode = 0
+
+[node name="Area2D" type="Area2D" parent="Processor/ProcessorUI"]
+position = Vector2(36, 45)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Processor/ProcessorUI/Area2D"]
+position = Vector2(4.5, -3.5)
+shape = SubResource("RectangleShape2D_mncer")
+
+[node name="PanProc" type="Panel" parent="Processor/ProcessorUI" groups=["panproc"]]
+z_index = 2
+layout_mode = 0
+offset_right = 18.0
+offset_bottom = 17.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_e737r")
+
+[node name="TextureRect2" type="TextureRect" parent="Processor/ProcessorUI"]
+layout_mode = 0
+offset_left = -25.0
+offset_top = -8.0
+offset_right = 108.0
+offset_bottom = 94.0
+texture = ExtResource("6_d5r0g")
+expand_mode = 1
+
+[node name="PurchaseProcessor" parent="Processor" groups=["purch_proc"] instance=ExtResource("3_nemsl")]
+visible = false
+offset_left = -150.0
+offset_top = 700.0
+offset_right = -70.0
+offset_bottom = 780.0
+focus_mode = 0
+script = ExtResource("4_nemsl")
+
+[node name="Area2D" type="Area2D" parent="Processor/PurchaseProcessor"]
+position = Vector2(36, 45)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Processor/PurchaseProcessor/Area2D"]
+position = Vector2(4.5, -3.5)
+shape = SubResource("RectangleShape2D_mncer")
+
+[node name="PanBat" type="Panel" parent="Processor/PurchaseProcessor" groups=["panbat"]]
+z_index = 2
+layout_mode = 1
+offset_right = 18.0
+offset_bottom = 17.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_e737r")
+
+[node name="Sprite3D" type="Sprite3D" parent="Processor"]
+transform = Transform3D(0.100078, 8.88178e-16, 3.55271e-15, -1.10708e-15, -4.7455e-09, 1, 0, -0.108564, -4.37114e-08, -1.09164, 0.26474, 0.0601768)
+texture = ExtResource("6_d5r0g")
+
+[node name="Speaker" type="Area3D" parent="." groups=["speaker"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.514758, 0, 0)
+script = ExtResource("2_j8rg2")
+
+[node name="MeshInstance3D50" type="MeshInstance3D" parent="Speaker"]
+transform = Transform3D(-0.0050075, 0.572338, 0.00466879, -0.199907, -0.0143785, 0.00386902, 0.00159749, -0.00524557, 0.498801, -0.869426, 0.2005, 0.621794)
+mesh = SubResource("BoxMesh_haghd")
+skeleton = NodePath("../..")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Speaker"]
+transform = Transform3D(-0.0066408, 0.650266, 0.00538607, -0.265111, -0.0163362, 0.00446343, 0.00211854, -0.00595979, 0.575434, -0.868897, 0.201893, 0.619472)
+shape = SubResource("ConcavePolygonShape3D_haghd")
+
+[node name="Broken_Speaker" type="Area3D" parent="Speaker" groups=["brok_speak"]]
+visible = false
+
+[node name="MeshInstance3D6" type="MeshInstance3D" parent="Speaker/Broken_Speaker"]
+transform = Transform3D(-0.0050075, 0.572338, 0.00466879, -0.199907, -0.0143785, 0.00386902, 0.00159749, -0.00524557, 0.498801, -0.869426, 0.2005, 0.621794)
+mesh = SubResource("BoxMesh_haghd")
+skeleton = NodePath("../../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_a8f2s")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Speaker/Broken_Speaker"]
+transform = Transform3D(-0.0050075, 0.572338, 0.00466879, -0.199907, -0.0143785, 0.00386902, 0.00159749, -0.00524557, 0.498801, -0.868897, 0.201893, 0.619472)
+visible = false
+shape = SubResource("ConcavePolygonShape3D_haghd")
+
+[node name="SpeakerUI" parent="Speaker" groups=["speakerui", "ui_elements"] instance=ExtResource("3_nemsl")]
+offset_left = -150.0
+offset_top = 700.0
+offset_right = -70.0
+offset_bottom = 780.0
+focus_mode = 0
+
+[node name="Area2D" type="Area2D" parent="Speaker/SpeakerUI"]
+position = Vector2(36, 45)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Speaker/SpeakerUI/Area2D"]
+position = Vector2(4.5, -3.5)
+shape = SubResource("RectangleShape2D_mncer")
+
+[node name="PanSpeak" type="Panel" parent="Speaker/SpeakerUI" groups=["panspeak"]]
+z_index = 2
+layout_mode = 0
+offset_right = 18.0
+offset_bottom = 17.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_e737r")
+
+[node name="TextureRect2" type="TextureRect" parent="Speaker/SpeakerUI"]
+layout_mode = 0
+offset_left = -3.0
+offset_top = 2.0
+offset_right = 85.0
+offset_bottom = 84.0
+texture = ExtResource("7_4p4kh")
+expand_mode = 1
+
+[node name="PurchaseSpeaker" parent="Speaker" groups=["purch_speak"] instance=ExtResource("3_nemsl")]
+visible = false
+offset_left = -150.0
+offset_top = 700.0
+offset_right = -70.0
+offset_bottom = 780.0
+focus_mode = 0
+script = ExtResource("4_nemsl")
+
+[node name="Area2D" type="Area2D" parent="Speaker/PurchaseSpeaker"]
+position = Vector2(36, 45)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Speaker/PurchaseSpeaker/Area2D"]
+position = Vector2(4.5, -3.5)
+shape = SubResource("RectangleShape2D_mncer")
+
+[node name="PanBat" type="Panel" parent="Speaker/PurchaseSpeaker" groups=["panbat"]]
+z_index = 2
+layout_mode = 1
+offset_right = 18.0
+offset_bottom = 17.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_e737r")
+
+[node name="Sprite3D3" type="Sprite3D" parent="Speaker"]
+transform = Transform3D(0.120209, 1.33227e-15, 3.55271e-15, -1.32978e-15, -4.71362e-09, 1, 0, -0.107835, -4.37114e-08, -0.870951, 0.309833, 0.61475)
+texture = ExtResource("7_4p4kh")
+
+[node name="Camera" type="Area3D" parent="." groups=["camera"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.514758, 0, -1.1318)
+script = ExtResource("2_j8rg2")
+metadata/_edit_group_ = true
+
+[node name="MeshInstance3D50" type="MeshInstance3D" parent="Camera"]
+transform = Transform3D(-0.00503938, 0.3747, 0.00331033, -0.20118, -0.00941337, 0.00274326, 0.00160766, -0.00343419, 0.353666, -0.704853, 0.2005, 0.529301)
+mesh = SubResource("BoxMesh_haghd")
+skeleton = NodePath("../..")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Camera"]
+transform = Transform3D(-0.00668308, 0.425718, 0.0038189, -0.266799, -0.010695, 0.00316472, 0.00213203, -0.00390178, 0.408002, -0.704507, 0.201893, 0.52765)
+shape = SubResource("ConcavePolygonShape3D_haghd")
+
+[node name="Broken_Camera" type="Area3D" parent="Camera" groups=["brok_cam"]]
+visible = false
+
+[node name="MeshInstance3D6" type="MeshInstance3D" parent="Camera/Broken_Camera"]
+transform = Transform3D(-0.0050083, 0.378987, 0.00359873, -0.199939, -0.00952108, 0.00298228, 0.00159774, -0.00347348, 0.384478, -0.706629, 0.204907, 0.518594)
+mesh = SubResource("BoxMesh_haghd")
+skeleton = NodePath("../../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_a8f2s")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Camera/Broken_Camera"]
+transform = Transform3D(-0.0050075, 0.572338, 0.00466879, -0.199907, -0.0143785, 0.00386902, 0.00159749, -0.00524557, 0.498801, -0.868897, 0.201893, 0.619472)
+visible = false
+shape = SubResource("ConcavePolygonShape3D_haghd")
+
+[node name="CameraUI" parent="Camera" groups=["cameraui", "ui_elements"] instance=ExtResource("3_nemsl")]
+offset_left = -150.0
+offset_top = 700.0
+offset_right = -70.0
+offset_bottom = 780.0
+focus_mode = 0
+
+[node name="Area2D" type="Area2D" parent="Camera/CameraUI"]
+position = Vector2(36, 45)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Camera/CameraUI/Area2D"]
+position = Vector2(4.5, -3.5)
+shape = SubResource("RectangleShape2D_mncer")
+
+[node name="PanCam" type="Panel" parent="Camera/CameraUI" groups=["pancam"]]
+z_index = 2
+layout_mode = 1
+offset_right = 18.0
+offset_bottom = 17.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_e737r")
+
+[node name="TextureRect2" type="TextureRect" parent="Camera/CameraUI"]
+layout_mode = 0
+offset_left = -9.0
+offset_top = 9.0
+offset_right = 95.0
+offset_bottom = 86.0
+texture = ExtResource("7_siosq")
+expand_mode = 1
+
+[node name="PurchaseCamera" parent="Camera" groups=["purch_cam"] instance=ExtResource("3_nemsl")]
+visible = false
+offset_left = -150.0
+offset_top = 700.0
+offset_right = -70.0
+offset_bottom = 780.0
+focus_mode = 0
+script = ExtResource("4_nemsl")
+
+[node name="Area2D" type="Area2D" parent="Camera/PurchaseCamera"]
+position = Vector2(36, 45)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Camera/PurchaseCamera/Area2D"]
+position = Vector2(4.5, -3.5)
+shape = SubResource("RectangleShape2D_mncer")
+
+[node name="PanBat" type="Panel" parent="Camera/PurchaseCamera" groups=["panbat"]]
+z_index = 2
+layout_mode = 1
+offset_right = 18.0
+offset_bottom = 17.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_e737r")
+
+[node name="Sprite3D2" type="Sprite3D" parent="Camera"]
+transform = Transform3D(0.0654613, 8.88178e-16, 3.55271e-15, -7.24147e-16, -3.44094e-09, 1, 0, -0.0787196, -4.37114e-08, -0.681736, 0.305436, 0.527916)
+texture = ExtResource("7_siosq")
+
+[node name="Lutii" type="Node3D" parent="."]
+script = ExtResource("4_j8rg2")

@@ -1,0 +1,75 @@
+[gd_scene load_steps=3 format=3 uid="uid://dqi7gjr2uoagd"]
+
+[ext_resource type="Script" uid="uid://bbfyn0drthhbd" path="res://Assets/Scripts/Ok.gd" id="1_3mm6u"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_41miw"]
+bg_color = Color(0.325441, 0.325441, 0.325441, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[node name="MagazInvent" type="Panel"]
+offset_left = 169.0
+offset_top = 145.0
+offset_right = 959.0
+offset_bottom = 485.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_41miw")
+
+[node name="BatteryPoc" type="Button" parent="."]
+layout_mode = 0
+offset_left = 55.0
+offset_top = 111.0
+offset_right = 170.0
+offset_bottom = 215.0
+text = "Батарейка: 
+купить за
+100$"
+
+[node name="ProcessorPoc" type="Button" parent="."]
+layout_mode = 0
+offset_left = 233.0
+offset_top = 113.0
+offset_right = 348.0
+offset_bottom = 217.0
+text = "Процессор: 
+купить за
+200$"
+
+[node name="SpeakerPoc" type="Button" parent="."]
+layout_mode = 0
+offset_left = 428.0
+offset_top = 110.0
+offset_right = 543.0
+offset_bottom = 214.0
+text = "Динамик: 
+купить за
+80$"
+
+[node name="CameraPoc" type="Button" parent="."]
+layout_mode = 0
+offset_left = 606.0
+offset_top = 111.0
+offset_right = 721.0
+offset_bottom = 215.0
+text = "Камера: 
+купить за
+50$"
+
+[node name="X" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -47.0
+offset_bottom = 43.0
+grow_horizontal = 0
+theme_override_font_sizes/font_size = 25
+text = "X"
+script = ExtResource("1_3mm6u")
+
+[connection signal="pressed" from="X" to="X" method="_on_pressed"]

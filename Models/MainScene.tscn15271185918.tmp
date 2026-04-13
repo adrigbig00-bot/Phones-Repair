@@ -1,0 +1,85 @@
+[gd_scene load_steps=9 format=3 uid="uid://coaoefmjkgnga"]
+
+[ext_resource type="Script" uid="uid://bksuypjvur745" path="res://Assets/Scripts/Test.gd" id="1_8tt86"]
+[ext_resource type="PackedScene" uid="uid://3ioruj5xok6p" path="res://Assets/Models/Phone_system.tscn" id="3_bhoh1"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_xpo3y"]
+load_path = "res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex"
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jcq6x"]
+size = Vector2(123.384, 129)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_go42g"]
+size = Vector2(123.384, 407)
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_mncer"]
+sky_horizon_color = Color(0.662243, 0.671743, 0.686743, 1)
+ground_horizon_color = Color(0.662243, 0.671743, 0.686743, 1)
+
+[sub_resource type="Sky" id="Sky_cguwc"]
+sky_material = SubResource("ProceduralSkyMaterial_mncer")
+
+[sub_resource type="Environment" id="Environment_wicfy"]
+background_mode = 2
+sky = SubResource("Sky_cguwc")
+tonemap_mode = 2
+
+[node name="Main" type="Node3D" node_paths=PackedStringArray("old_phone")]
+script = ExtResource("1_8tt86")
+phone_scene = ExtResource("3_bhoh1")
+old_phone = NodePath("Phone")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Control" type="Control" parent="CanvasLayer"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Panel" type="Panel" parent="CanvasLayer/Control" groups=["panel"]]
+layout_mode = 0
+offset_left = 151.0
+offset_top = 537.0
+offset_right = 1004.0
+offset_bottom = 647.0
+
+[node name="GridContainer2" type="GridContainer" parent="CanvasLayer/Control/Panel" groups=["inventory"]]
+layout_mode = 0
+offset_top = 15.0
+offset_right = 854.0
+offset_bottom = 90.0
+theme_override_constants/h_separation = 2
+columns = 8
+
+[node name="Pochinka" type="StaticBody2D" parent="CanvasLayer/Control"]
+position = Vector2(440, 823)
+
+[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer/Control/Pochinka"]
+texture = SubResource("CompressedTexture2D_xpo3y")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CanvasLayer/Control/Pochinka"]
+position = Vector2(0, 1.5)
+shape = SubResource("RectangleShape2D_jcq6x")
+
+[node name="Viewport" type="StaticBody2D" parent="CanvasLayer/Control"]
+position = Vector2(578, 311)
+scale = Vector2(9.28, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CanvasLayer/Control/Viewport"]
+position = Vector2(-0.161636, -56.5)
+shape = SubResource("RectangleShape2D_go42g")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_wicfy")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-0.866025, -0.433013, 0.25, 0, 0.5, 0.866025, -0.5, 0.75, -0.433013, 0, 0, 0)
+shadow_enabled = true
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.37915, 0.925335, 0, -0.925335, 0.37915, 0.196537, 1.81466, 1.17743)
+current = true
+
+[node name="Phone" parent="." instance=ExtResource("3_bhoh1")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0.0193362, -0.00763583, -0.245866)
